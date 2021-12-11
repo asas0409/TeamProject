@@ -38,9 +38,7 @@
 </head>
 <body>
 <h1>한동대 맛집 정보</h1>
-<form action="search" method="GET">
-<input type="text" name="search"/>
-<input type="submit" value="검색하기"/>
+<form action="">
 </form>
 
 <!-- table -->

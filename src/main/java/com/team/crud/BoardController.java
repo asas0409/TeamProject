@@ -24,6 +24,13 @@ public class BoardController {
       return "list";
    }
    
+   @RequestMapping(value="/crud/search", method = RequestMethod.GET)
+   public String searchlist(Model model, String search) {
+	  System.out.println(search);
+      model.addAttribute("list",boardDAO.getSearchList(search));
+      return "search";
+   }
+   
    @RequestMapping(value="/crud/add", method = RequestMethod.GET)
    public String addPost() {
       return "addpostform";
@@ -33,8 +40,8 @@ public class BoardController {
    @RequestMapping(value="/crud/addok", method = RequestMethod.POST)
    public String addPostOK(BoardVO vo) {
       int i = boardDAO.insertBoard(vo);
-      if(i==0) System.out.println("������ �߰� ����");
-      else System.out.println("������ �߰� ����!!!" + vo.getContent());
+      if(i==0) System.out.println("추가 실패");
+      else System.out.println("추가 성공!!!" + vo.getContent());
       return "redirect:list";
    }
    
@@ -48,16 +55,16 @@ public class BoardController {
    @RequestMapping(value="/crud/editok", method = RequestMethod.GET)
    public String editPostOK(BoardVO vo) {
       int i = boardDAO.updateBoard(vo);
-      if(i==0) System.out.println("������ ���� ����");
-      else System.out.println("������ ���� ����!!!");
+      if(i==0) System.out.println("수정 실패");
+      else System.out.println("수정 성공");
       return "redirect:list";
    }
    
    @RequestMapping(value="/crud/deletepost/{id}", method = RequestMethod.GET)
    public String deletePost(@PathVariable("id") int id, Model model) {
       int i = boardDAO.deleteBoard(id);
-      if(i==0) System.out.println("������ ���� ����");
-      else System.out.println("������ ���� ����!!!");
+      if(i==0) System.out.println("삭제 실패");
+      else System.out.println("삭제 성공!!!");
       return "redirect:../list";
    }
 

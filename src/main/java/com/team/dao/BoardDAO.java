@@ -26,6 +26,7 @@ public class BoardDAO {
 	private final String BOARD_DELETE = "delete from restaurant  where id=?";
 	private final String BOARD_GET = "select * from restaurant  where id=?";
 	private final String BOARD_LIST = "select * from restaurant order by id desc";
+	private final String BOARD_SEARCH = "select * from restaurant where name=? order by id desc";
 
 	public int insertBoard(BoardVO vo) {
 		return template.update(BOARD_INSERT,new
@@ -64,5 +65,24 @@ public class BoardDAO {
 				return data;
 			}
 		});
+	}
+	
+	public List<BoardVO> getSearchList(String name){
+		return template.query(BOARD_SEARCH, new RowMapper<BoardVO>() {
+			@Override
+			public BoardVO mapRow(ResultSet rs, int rowNum) throws SQLException{
+				BoardVO data = new BoardVO();
+				data.setId(rs.getInt("id"));
+				data.setCategory(rs.getString("category"));
+				data.setName(rs.getString("name"));
+				data.setWriter(rs.getString("writer"));
+				data.setWritedate(rs.getString("writedate"));
+				data.setVisitdate(rs.getString("visitdate"));
+				data.setScore(rs.getInt("score"));
+				data.setContent(rs.getString("content"));
+				data.setPw(rs.getString("pw"));
+				return data;
+			}
+		},name);
 	}
 }
