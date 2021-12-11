@@ -1,5 +1,7 @@
 package com.team.crud;
 
+//test
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
@@ -31,8 +33,8 @@ public class BoardController {
    @RequestMapping(value="/crud/addok", method = RequestMethod.POST)
    public String addPostOK(BoardVO vo) {
       int i = boardDAO.insertBoard(vo);
-      if(i==0) System.out.println("µ¥ÀÌÅÍ Ãß°¡ ½ÇÆÐ");
-      else System.out.println("µ¥ÀÌÅÍ Ãß°¡ ¼º°ø!!!" + vo.getContent());
+      if(i==0) System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½");
+      else System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½!!!" + vo.getContent());
       return "redirect:list";
    }
    
@@ -46,16 +48,16 @@ public class BoardController {
    @RequestMapping(value="/crud/editok", method = RequestMethod.GET)
    public String editPostOK(BoardVO vo) {
       int i = boardDAO.updateBoard(vo);
-      if(i==0) System.out.println("µ¥ÀÌÅÍ ¼öÁ¤ ½ÇÆÐ");
-      else System.out.println("µ¥ÀÌÅÍ ¼öÁ¤ ¼º°ø!!!");
+      if(i==0) System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+      else System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!!!");
       return "redirect:list";
    }
    
    @RequestMapping(value="/crud/deletepost/{id}", method = RequestMethod.GET)
    public String deletePost(@PathVariable("id") int id, Model model) {
       int i = boardDAO.deleteBoard(id);
-      if(i==0) System.out.println("µ¥ÀÌÅÍ »èÁ¦ ½ÇÆÐ");
-      else System.out.println("µ¥ÀÌÅÍ »èÁ¦ ¼º°ø!!!");
+      if(i==0) System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+      else System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!!!");
       return "redirect:../list";
    }
 
