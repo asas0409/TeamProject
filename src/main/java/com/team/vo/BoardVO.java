@@ -7,7 +7,7 @@ public class BoardVO {
 	private String category;
 	private String name;
 	private String writer;
-	private String writedate;
+	private Date writedate;
 	private String visitdate;
 	private int score;
 	private String image;
@@ -38,10 +38,10 @@ public class BoardVO {
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
-	public String getWritedate() {
+	public Date getWritedate() {
 		return writedate;
 	}
-	public void setWritedate(String writedate) {
+	public void setWritedate(Date writedate) {
 		this.writedate = writedate;
 	}
 	public String getVisitdate() {

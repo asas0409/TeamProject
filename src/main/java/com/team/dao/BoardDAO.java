@@ -57,7 +57,7 @@ public class BoardDAO {
 				data.setCategory(rs.getString("category"));
 				data.setName(rs.getString("name"));
 				data.setWriter(rs.getString("writer"));
-				data.setWritedate(rs.getString("writedate"));
+				data.setWritedate(rs.getDate("writedate"));
 				data.setVisitdate(rs.getString("visitdate"));
 				data.setScore(rs.getInt("score"));
 				data.setContent(rs.getString("content"));
@@ -76,7 +76,7 @@ public class BoardDAO {
 				data.setCategory(rs.getString("category"));
 				data.setName(rs.getString("name"));
 				data.setWriter(rs.getString("writer"));
-				data.setWritedate(rs.getString("writedate"));
+				data.setWritedate(rs.getDate("writedate"));
 				data.setVisitdate(rs.getString("visitdate"));
 				data.setScore(rs.getInt("score"));
 				data.setContent(rs.getString("content"));
