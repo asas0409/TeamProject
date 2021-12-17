@@ -11,7 +11,12 @@
 <h1>Add New Post</h1>
 <form action="addok" method="post">
 <table>
-<tr><td>카테고리:</td><td><input type="text" name="category"/></td></tr>
+<tr><td>카테고리:</td><td><select name="category">
+    <option value="한식">한식</option>
+    <option value="일식">일식</option>
+    <option value="중식">중식</option>
+    <option value="양식">양식</option>
+</select></td></tr>
 <tr><td>상호명:</td><td><input type="text" name="name"/></td></tr>
 <tr><td>작성자:</td><td><input type="text" name="writer"/></td></tr>
 <tr><td>방문일:</td><td><input type="date" name="visitdate"/></td></tr>
