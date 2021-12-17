@@ -8,15 +8,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>free board</title>
 <style>
+#list td, #list th {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align:center;
+}
 #list {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
-}
-#list td, #list th {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align:center;
 }
 #list tr:nth-child(even){background-color: #f2f2f2;}
 #list tr:hover {background-color: #ddd;}
