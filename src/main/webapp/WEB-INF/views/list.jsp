@@ -27,6 +27,9 @@
   background-color: #006bb3;
   color: white;
 }
+#content{
+	width: 37%;
+}
 </style>
 <script>
    //삭제하겠다고 하면 parameter로 받아온 id값을 id로 설정해서 deletepost.jsp로
@@ -55,7 +58,7 @@
    <th>작성일</th>
    <th>방문일</th>
    <th>평점</th>
-   <th>내용</th>
+   <th id="content">내용</th>
    <th>Edit</th>
    <th>Delete</th>
 </tr>
@@ -69,7 +72,7 @@
       <td>${u.getWritedate()}</td>
       <td>${u.getVisitdate()}</td>
       <td>${u.getScore()}</td>
-      <td>${u.getContent()}</td>
+      <td id="content">${u.getContent()}</td>
       <td><a href="editform/${u.getId()}">Edit</a></td>
       <td><a href="deletepost/${u.getId()}">Delete</a></td>
    </tr>
