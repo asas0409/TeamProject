@@ -1,13 +1,17 @@
 package com.team.vo;
 
+
 import java.util.Date;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class BoardVO {
 	private int id;
 	private String category;
 	private String name;
 	private String writer;
-	private Date writedate;
+	private String writedate;
 	private String visitdate;
 	private int score;
 	private String image;
@@ -38,10 +42,10 @@ public class BoardVO {
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
-	public Date getWritedate() {
+	public String getWritedate() {
 		return writedate;
 	}
-	public void setWritedate(Date writedate) {
+	public void setWritedate(String writedate) {
 		this.writedate = writedate;
 	}
 	public String getVisitdate() {
