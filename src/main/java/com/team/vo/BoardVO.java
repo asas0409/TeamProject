@@ -1,11 +1,7 @@
 package com.team.vo;
 
-
 import java.util.Date;
 
-import org.springframework.stereotype.Repository;
-
-@Repository
 public class BoardVO {
 	private int id;
 	private String category;

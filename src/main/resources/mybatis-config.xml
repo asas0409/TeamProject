@@ -3,5 +3,6 @@
 <configuration>
 	<typeAliases>
 		<typeAlias alias="board" type="com.team.vo.BoardVO" />
+		<typeAlias alias="user" type="com.team.vo.UserVO" />
 	</typeAliases>
 </configuration>
